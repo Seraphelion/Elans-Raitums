@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double basenum;
+    double basenum2;
+    double exponentnum;
+    char answer = 'y';
+    
+    while (answer == 'y') {
+        cout << "This is an exponent function calculator 2.0" << endl << "Write your base number: ";
+        cin >> basenum;
+        cout << "Write your exponent number: ";
+        cin >> exponentnum;
+
+        basenum2 = basenum;
+
+        if (exponentnum > 0) {
+
+            for (int i = 1; i < exponentnum; i++) {
+                basenum = basenum * basenum2;
+            }
+
+        } else if (exponentnum < 0) { /* else if (-2) > 0*/
+
+            for (int i = -1; i > exponentnum; i--) { /*for (int i = -1; i > -2; i--)*/
+                basenum = basenum * basenum2; /*basenum = 9*9*/
+            }
+
+            basenum = (1 / basenum);
+
+        } else if (exponentnum == 0) {
+            basenum = 1;
+        } else {
+            cout << "Something went wrong" << endl;
+        }
+
+            cout << "Your answer is: " << basenum << endl << endl;
+            cout << "Do you want to continue? y/n: " << endl;
+            cin >> answer;
+            cout << endl;
+
+    }
+
+    return 0;
+}
