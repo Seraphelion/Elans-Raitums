@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    double num1;
+    double num2;
+    string task;
+
+
+    cout << "Welcome to the calculator!" << endl;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    cout << "choose what you want to do [+ | - | / | *]: " << endl;
+    cin >> task;
+
+    if (task == "+"){
+        cout << num1 + num2;
+    }
+    else if (task == "-") {
+        cout << num1 - num2;
+    }
+    else if (task == "/") {
+        cout << num1 / num2;
+    }
+    else if (task == "*") {
+        cout << num1 * num2;
+    }
+    else {
+        cout << "Wrong!";
+    }
+
+    return 0;
+}
